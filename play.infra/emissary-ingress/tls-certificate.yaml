@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dotnetplayeconomy-tls-cert
+spec:
+  secretName: dotnetplayeconomy-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - dotnetplayeconomy.eastus.cloudapp.azure.com

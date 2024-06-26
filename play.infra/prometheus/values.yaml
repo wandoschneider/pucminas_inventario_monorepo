@@ -1,0 +1,11 @@
+prometheus:
+  prometheusSpec:
+    scrapeInterval: 5s
+    externalUrl: "/prometheus"
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+grafana:
+  grafana.ini:
+    server:
+      root_url: "%(protocol)s://%(domain)s/grafana"
+      serve_from_sub_path: true

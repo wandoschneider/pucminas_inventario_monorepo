@@ -1,0 +1,10 @@
+apiVersion: getambassador.io/v3alpha1
+kind: Host
+metadata:
+  name: dotnetplayeconomy-host
+spec:
+  hostname: dotnetplayeconomy.eastus.cloudapp.azure.com
+  acmeProvider:
+    email: wandoschneider@gmail.com
+  tlsSecret:
+    name: dotnetplayeconomy-tls
